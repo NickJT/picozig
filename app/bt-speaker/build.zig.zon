@@ -1,0 +1,21 @@
+.{
+    .name = .bt_speaker,
+    .version = "0.1.0",
+    .fingerprint = 0xf138cb97f9c700a3,
+    .minimum_zig_version = "0.17.0",
+    // **Two libraries, which is why this is an app and not an example.**
+    // `lib/cyw43` must not depend on `lib/pcm5100`: a wireless driver has no
+    // business knowing about a DAC, and the workspace layering — dependencies
+    // point strictly downward — exists to keep that true. An A2DP sink is where the two meet.
+    .dependencies = .{
+        .picozig = .{ .path = "../../lib/picozig" },
+        .pico2w = .{ .path = "../../lib/pico2w" },
+        .cyw43 = .{ .path = "../../lib/cyw43" },
+        .pcm5100 = .{ .path = "../../lib/pcm5100" },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+    },
+}

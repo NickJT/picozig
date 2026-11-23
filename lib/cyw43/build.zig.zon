@@ -1,0 +1,19 @@
+.{
+    .name = .cyw43,
+    .version = "0.1.0",
+    .fingerprint = 0x5bc3f9a21ef86326,
+    .minimum_zig_version = "0.17.0",
+    .dependencies = .{
+        .picozig = .{ .path = "../picozig" },
+        .pico_lipo2 = .{ .path = "../pico-lipo2" },
+        .pico2 = .{ .path = "../pico2" },
+        .pico2w = .{ .path = "../pico2w" },
+        .pico_plus2w = .{ .path = "../pico-plus2w" },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "example",
+    },
+}

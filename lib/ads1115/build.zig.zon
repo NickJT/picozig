@@ -1,0 +1,16 @@
+.{
+    .name = .ads1115,
+    .version = "0.0.0",
+    .fingerprint = 0x606a9c8e23d479e2,
+    .minimum_zig_version = "0.17.0",
+    // **Build-time only.** The soft-float guard; nothing in `src/` imports
+    // anything but `std`.
+    .dependencies = .{
+        .no_float = .{ .path = "../no-float" },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+    },
+}

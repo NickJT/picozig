@@ -1,0 +1,18 @@
+.{
+    .name = .inventor,
+    .version = "0.1.0",
+    .fingerprint = 0x29c9626446c74e3c,
+    .minimum_zig_version = "0.17.0",
+    .dependencies = .{
+        .picozig = .{ .path = "../picozig" },
+        .pico2w = .{ .path = "../pico2w" },
+        .ws2812 = .{ .path = "../ws2812" },
+        .servo = .{ .path = "../servo" },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "example",
+    },
+}

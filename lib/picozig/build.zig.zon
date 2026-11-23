@@ -1,0 +1,21 @@
+.{
+    .name = .picozig,
+    .version = "0.0.0",
+    .fingerprint = 0xdda7729cba69d68c, // Changing this has security and trust implications.
+    .minimum_zig_version = "0.17.0",
+    .dependencies = .{},
+    // `rp2350.ld` and `tools/` are listed because they are build inputs, not
+    // just documentation: a dependent reaches the linker script through
+    // `dep.path("rp2350.ld")` and the UF2 packer through `tools/elf2uf2.zig`,
+    // and a file omitted here would not exist for them to reach.
+    //
+    // `reference/` is deliberately absent — the datasheets are gitignored, and
+    // nothing in the build reads them.
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "tools",
+        "rp2350.ld",
+    },
+}

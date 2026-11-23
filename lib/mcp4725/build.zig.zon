@@ -1,0 +1,16 @@
+.{
+    .name = .mcp4725,
+    .version = "0.1.0",
+    .fingerprint = 0xe51163d12d74dad2,
+    .minimum_zig_version = "0.17.0",
+    .dependencies = .{
+        .picozig = .{ .path = "../picozig" },
+        .pico2w = .{ .path = "../pico2w" },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "example",
+    },
+}

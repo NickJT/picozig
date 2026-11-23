@@ -1,0 +1,17 @@
+.{
+    .name = .drv8833c,
+    .version = "0.1.0",
+    .fingerprint = 0x353c73e494726542,
+    .minimum_zig_version = "0.17.0",
+    .dependencies = .{
+        .picozig = .{ .path = "../picozig" },
+        .pico2w = .{ .path = "../pico2w" },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "example",
+        "reference",
+    },
+}

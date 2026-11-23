@@ -1,0 +1,30 @@
+.{
+    .name = .ipnet,
+    .version = "0.0.0",
+    .fingerprint = 0x34948e50a18a2baa, // Changing this has security and trust implications.
+    .minimum_zig_version = "0.17.0",
+    .dependencies = .{
+        // **Only the example needs a radio.** The library is device-free: its
+        // `IpStack` and `Session` are generic over a device the same way
+        // `nrf24` is generic over its SPI bus, so nothing in `src/` imports
+        // this and `build.zig` does not hand it to the library module.
+        //
+        // Declared here rather than inside the example so there is one path to
+        // cyw43 — and therefore one to picozig beneath it.
+        .cyw43 = .{ .path = "../cyw43" },
+        // Not for the library either — the example needs `rp2350`, `board` and
+        // `boot`, and cyw43 does not re-export them. Built with the same target
+        // and optimize mode as cyw43's, so both graphs resolve to one picozig.
+        .picozig = .{ .path = "../picozig" },
+        .pico_lipo2 = .{ .path = "../pico-lipo2" },
+        .pico2 = .{ .path = "../pico2" },
+        .pico2w = .{ .path = "../pico2w" },
+        .pico_plus2w = .{ .path = "../pico-plus2w" },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "example",
+    },
+}

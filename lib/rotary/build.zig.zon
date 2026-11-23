@@ -1,0 +1,16 @@
+.{
+    .name = .rotary,
+    .version = "0.0.0",
+    .fingerprint = 0x75d2a9c524e02270,
+    .minimum_zig_version = "0.17.0",
+    // **Build-time only.** The soft-float guard; nothing in `src/` imports
+    // anything but `std`.
+    .dependencies = .{
+        .no_float = .{ .path = "../no-float" },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+    },
+}

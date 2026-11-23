@@ -1,0 +1,15 @@
+.{
+    .name = .ws2812,
+    .version = "0.1.0",
+    .fingerprint = 0x6747d4f5a22e6159,
+    .minimum_zig_version = "0.17.0",
+    .dependencies = .{
+        .picozig = .{ .path = "../picozig" },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "example",
+    },
+}

@@ -1,0 +1,14 @@
+.{
+    .name = .pico_lipo2,
+    .version = "0.0.0",
+    .fingerprint = 0x5fee971a647a2c97,
+    .minimum_zig_version = "0.17.0",
+    .dependencies = .{
+        .picozig = .{ .path = "../picozig" },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+    },
+}

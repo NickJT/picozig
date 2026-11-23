@@ -1,0 +1,15 @@
+.{
+    .name = .servo,
+    .version = "0.1.0",
+    .fingerprint = 0x87b574b411ac96a8,
+    .minimum_zig_version = "0.17.0",
+    .dependencies = .{
+        .picozig = .{ .path = "../picozig" },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "example",
+    },
+}

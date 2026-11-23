@@ -1,0 +1,16 @@
+.{
+    .name = .ads1115_bring_up,
+    .version = "0.0.0",
+    .fingerprint = 0x99f45759806f60bf,
+    .minimum_zig_version = "0.17.0",
+    .dependencies = .{
+        .picozig = .{ .path = "../../../picozig" },
+        .pico_lipo2 = .{ .path = "../../../pico-lipo2" },
+        .ads1115 = .{ .path = "../.." },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "main.zig",
+    },
+}

@@ -1,0 +1,14 @@
+.{
+    .name = .hello_uart,
+    .version = "0.0.0",
+    .fingerprint = 0xe068c101df0b2e29, // Changing this has security and trust implications.
+    .minimum_zig_version = "0.17.0",
+    .dependencies = .{
+        .picozig = .{ .path = "../../../lib/picozig" },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "main.zig",
+    },
+}
