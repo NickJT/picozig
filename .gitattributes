@@ -1,0 +1,3 @@
+# The CYW43 firmware headers are cyw43-driver's files, shipped as build input;
+# without this GitHub counts their 2.8 MB of byte arrays as the repo's C.
+lib/cyw43/reference/** linguist-vendored
